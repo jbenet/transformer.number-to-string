@@ -1,9 +1,9 @@
-var transformer = require('dat-transformer');
-var tNumber = transformer('number');
-var tString = transformer('string');
+var Conversion = require('transformer-conversion');
+var tNumber = require('transformer.number');
+var tString = require('transformer.string');
 // require any other modules you may need here.
 
-module.exports = transformer.Conversion(tNumber, tString, convert);
+module.exports = Conversion(tNumber, tString, convert);
 
 function convert(num) {
   return num.toString();
